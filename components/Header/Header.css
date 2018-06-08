@@ -1,0 +1,35 @@
+.header {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:55px;
+    background-color:#000000;
+}
+
+.btn-back {
+  padding:5px 10px;
+  background: linear-gradient(#2e2e2e, #111111);
+  border-radius:5px;
+  border:0.5px solid #393b3d;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  cursor:pointer;
+}
+
+.btn-back > span {
+  color:white;
+}
+
+.btn-back > span::before {
+  content:'< ' 
+}
+
+.header_maintext {
+  color:white;
+}
+
+.header_logoimg {
+  width:50px;
+  height:35px;
+}
