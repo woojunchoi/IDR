@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
 import App from "../containers/App";
-// import store from "./store";
+import { HashRouter } from "react-router-dom";
 
 render(
-  <div>
+  <HashRouter>
     <App />
-  </div>,
+  </HashRouter>,
   document.getElementById("container")
 );

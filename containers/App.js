@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import Header from '../components/Header/Header'
-import Main from '../components/Main/Main'
-import Footer from '../components/Footer/Footer'
+import { Route } from "react-router-dom";
+import Partone from './Partone/Partone'
+import Parttwo from './Parttwo/Parttwo'
+import Home from './Home'
 
 
-function App() {
+class App extends Component{
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+  
   return (
-    <div>
-        <title>Hilton Mobile App</title>
-        {/* broke app down into 3 parts as below */}
-        <Header />
-        <Main />
-        <Footer />    
-    </div>
- );
+      <div className='container'>
+          <Route exact path='/' render={() => <Home />} />
+          <Route exact path='/partone' render={() => <Partone />} />
+          <Route exact path='/parttwo' render={() => <Parttwo />} />
+
+      </div>
+  )
+}
 }
 
 export default App;
