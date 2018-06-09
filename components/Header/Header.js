@@ -3,13 +3,14 @@ import styles from './Header.css';
 import logo from '../../test1_assets/hiltonLogo.png'
 import sample from'../../test1-mobile-page.png'
 
+
 //used stateless functional component
 //
-function Header() {
+function Header(props) {
   return (
     <div>
         <header className='header'>
-            <a className='btn-back'><span>Back</span></a>
+            <a className='btn-back' href='/'><span>Back</span></a>
             <h5 className='header_maintext'>Hotel Details</h5>
             <img className='header_logoimg' src={logo}/>
         </header>

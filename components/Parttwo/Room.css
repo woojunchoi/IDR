@@ -1,0 +1,43 @@
+.room-element {
+    display:inline-block;
+    border:5px solid #e7e7e7;
+    width:150px;
+    margin:15px;
+    box-sizing:border-box;
+}
+
+.room-main {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+}
+.room-checkbox {
+    margin-right:5px;
+}
+
+.room-main.disabled {
+    background-color: #e7e7e7
+}
+
+.room-number {
+    padding:3px;
+    background-color:#e7e7e7;
+    font-weight:800
+}
+.room-number.disabled {
+    color:#8b8c90;
+}
+.room-peoplenum-wrapper {
+    display:flex;
+    justify-content: center;
+}
+.room-peoplenum{
+    margin: 0 auto;
+}
+
+.room-selection > p {
+    line-height:0%;
+    color:#808080;
+}
+
