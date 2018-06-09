@@ -8,13 +8,13 @@ import Footer from '../../components/Footer/Footer'
 function Partone() {
   return (
     <div>
-        <title>Hilton Mobile App</title>
-        {/* broke app down into 3 parts as below */}
-        <Header />
-        <Main />
-        <Footer />    
+      <title>Hilton Mobile App</title>
+      {/* broke part1 down into 3 parts as below */}
+      <Header />
+      <Main />
+      <Footer />
     </div>
- );
+  );
 }
 
 export default Partone;

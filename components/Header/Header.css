@@ -15,14 +15,17 @@
   justify-content: center;
   align-items:center;
   cursor:pointer;
+  text-decoration:none;
 }
 
 .btn-back > span {
   color:white;
+  text-decoration: none;
 }
 
 .btn-back > span::before {
-  content:'< ' 
+  content:'< ' ;
+  text-decoration:none;
 }
 
 .header_maintext {

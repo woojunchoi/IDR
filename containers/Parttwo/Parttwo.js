@@ -6,37 +6,47 @@ import pic from '../../test2-dynamic-form.png'
 class Parttwo extends Component {
     constructor(props) {
         super(props)
+        //initial state for part 2
+        //first room's selected state is always true
         this.state = {
-            rooms : [
+            rooms: [
                 {
-                    selected:true,
-                    adults:1,
-                    children:0
+                    selected: true,
+                    adults: 1,
+                    children: 0
                 },
                 {
-                    selected:false,
-                    adults:1,
-                    children:0
+                    selected: false,
+                    adults: 1,
+                    children: 0
                 },
                 {
-                    selected:false,
-                    adults:1,
-                    children:0
+                    selected: false,
+                    adults: 1,
+                    children: 0
                 },
                 {
-                    selected:false,
-                    adults:1,
-                    children:0
+                    selected: false,
+                    adults: 1,
+                    children: 0
                 }
             ]
         }
     }
+    //method that changes 'selected' state of each room
     checkBox = (number) => {
         let newRooms;
+        //parseint argument since string number is passed to the method
         number = parseInt(number)
-        for(let i=1; i<=number; i++) {
+        //loop starts from index 1 because room1 is always selected
+        for (let i = 1; i <= number; i++) {
+            //copy array not to mutate original state
             newRooms = this.state.rooms.slice();
-            if(newRooms[number].selected) {
+            //check if room with the passed index is selected.
+            //if yes, 'selected' state of the rooms with less index than passed index (including passed index) 
+            //will be changed to false
+            //else, will be changed to true
+            if (newRooms[number].selected) {
                 newRooms[i].selected = false
             }
             else {
@@ -44,42 +54,43 @@ class Parttwo extends Component {
             }
         }
         this.setState({
-            rooms:newRooms
+            rooms: newRooms
         })
-        console.log(this.state.rooms)
     }
-    changeAdult = (index,e) => {
+    // method for updating 'adults' state of each room
+    changeAdult = (index, e) => {
         let newRoom = this.state.rooms.slice();
         newRoom[index].adults = parseInt(e.target.value);
         this.setState({
-            rooms:newRoom
+            rooms: newRoom
         })
     }
-    changeChildren = (index,e) => {
+    // method for updating 'children' state of each room
+    changeChildren = (index, e) => {
         let newRoom = this.state.rooms.slice();
         newRoom[index].children = parseInt(e.target.value);
         this.setState({
-            rooms:newRoom
+            rooms: newRoom
         })
-        console.log(this.state.rooms)
     }
 
     render() {
-        let roomArr =[]
-        for(let i=0; i<this.state.rooms.length; i++) {
+        // return Room component as many as state.rooms' length
+        let roomArr = []
+        for (let i = 0; i < this.state.rooms.length; i++) {
             roomArr.push(
-            <Room
-             key={i} number={i} selected={this.state.rooms[i].selected} 
-             checkBox={this.checkBox} 
-             changeAdult={this.changeAdult}
-             changeChildren={this.changeChildren}
-             />)
+                <Room
+                    key={i} number={i} selected={this.state.rooms[i].selected}
+                    checkBox={this.checkBox}
+                    changeAdult={this.changeAdult}
+                    changeChildren={this.changeChildren}
+                />)
         }
         return (
             <div className='room-container'>
-            {/* <img src={pic} /> */}
                 <title>Hilton Dynamic Form</title>
                 {roomArr}
+                {/* this button does nothing but can be used for a feature */}
                 <button className='submit-button'>Submit</button>
             </div>
         );
