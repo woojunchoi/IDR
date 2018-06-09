@@ -7,6 +7,8 @@ class Parttwo extends Component {
         super(props)
         //initial state for part 2
         //first room's selected state is always true
+        //default adult number=1 children number=0
+        //(requirement 3 and 4)
         this.state = {
             rooms: [
                 {
@@ -45,6 +47,7 @@ class Parttwo extends Component {
                 newRooms[i].children = 0
             }
         }
+        // if a room is selected, any preceding room is auto-checked (requirement 2)
         else if(!newRooms[number].selected){
             for(let i=1; i<=number; i++) {
                 newRooms[i].selected = true
@@ -90,7 +93,9 @@ class Parttwo extends Component {
                 <title>Hilton Dynamic Form</title>
                 {roomArr}
                 {/* this button does nothing but can be used for a feature */}
-                <button className='submit-button'>Submit</button>
+                {/* by pressing this button, we can invoked a function with modified state */}
+                {/* requirement 6 */}
+                <button className='submit-button' onClick={()=>{alert(JSON.stringify(this.state))}}>Submit</button>
             </div>
         );
     }

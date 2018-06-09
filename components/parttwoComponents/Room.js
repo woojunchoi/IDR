@@ -16,6 +16,8 @@ class Room extends Component {
         }
         return (
             <div className='room-element'>
+                {/* based on selected state from parent, dropdown is activated or deactivated (requirement 1) */}
+                {/* room2,room3,room4 are not selected by default */}
                 <div className={this.props.selected ? 'room-number' : 'room-number disabled'}>
                     {inputArr}
                     {/* add one since array index starts from 0 */}

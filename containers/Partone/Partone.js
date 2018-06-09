@@ -10,6 +10,7 @@ function Partone() {
     <div>
       <title>Hilton Mobile App</title>
       {/* broke part1 down into 3 parts as below */}
+      {/* designed only for mobile. for better ui/ux for desktop, media query is required */}
       <Header />
       <Main />
       <Footer />
