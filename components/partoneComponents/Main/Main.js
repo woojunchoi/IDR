@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Main.css';
 import Dropdown from '../Dropdown/Dropdown'
-import background from '../../test1_assets/background.png'
-import hotelImage from '../../test1_assets/hotelexterior.jpg'
+import background from '../../../test1_assets/background.png'
+import hotelImage from '../../../test1_assets/hotelexterior.jpg'
 
 
 function Main() {

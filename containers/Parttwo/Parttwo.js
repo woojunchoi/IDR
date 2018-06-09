@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Room from '../../components/Parttwo/Room'
+import Room from '../../components/parttwoComponents/Room'
 import styles from './Parttwo.css';
-import pic from '../../test2-dynamic-form.png'
 
 class Parttwo extends Component {
     constructor(props) {
@@ -57,18 +56,18 @@ class Parttwo extends Component {
     }
     // method for updating 'adults' state of each room
     changeAdult = (index, e) => {
-        let newRoom = this.state.rooms.slice();
-        newRoom[index].adults = parseInt(e.target.value);
+        let newRooms = this.state.rooms.slice();
+        newRooms[index].adults = parseInt(e.target.value);
         this.setState({
-            rooms: newRoom
+            rooms: newRooms
         })
     }
     // method for updating 'children' state of each room
     changeChildren = (index, e) => {
-        let newRoom = this.state.rooms.slice();
-        newRoom[index].children = parseInt(e.target.value);
+        let newRooms= this.state.rooms.slice();
+        newRooms[index].children = parseInt(e.target.value);
         this.setState({
-            rooms: newRoom
+            rooms: newRooms
         })
     }
 
@@ -82,8 +81,8 @@ class Parttwo extends Component {
                     checkBox={this.checkBox}
                     changeAdult={this.changeAdult}
                     changeChildren={this.changeChildren}
-                    adults = {this.state.adults}
-                    children = {this.state.children}
+                    adults = {this.state.rooms[i].adults}
+                    children = {this.state.rooms[i].children}
                 />)
         }
         return (
