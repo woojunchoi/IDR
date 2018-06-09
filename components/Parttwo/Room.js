@@ -9,7 +9,10 @@ class Room extends Component {
         let inputArr = []
         // check if props.number isn't 0 to put checkboxes on the rooms other than room1 (room1 doesnt have checkbox)
         if (this.props.number !== 0) {
-            inputArr.push(<input className='room-checkbox' key={this.props.number} type='checkbox' value={this.props.number} onChange={(e) => this.props.checkBox(e.target.value)} checked={this.props.selected} />)
+            inputArr.push(<input className='room-checkbox'
+             key={this.props.number} type='checkbox' value={this.props.number}
+            onChange={(e) => this.props.checkBox(e.target.value)}
+            checked={this.props.selected} />)
         }
         return (
             <div className='room-element'>

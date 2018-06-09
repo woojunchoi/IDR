@@ -35,21 +35,19 @@ class Parttwo extends Component {
     }
     //method that changes 'selected' state of each room
     checkBox = (number) => {
-        let newRooms;
-        //parseint argument since string number is passed to the method
+        let newRooms = this.state.rooms.slice()
         number = parseInt(number)
-        //loop starts from index 1 because room1 is always selected
-        for (let i = 1; i <= number; i++) {
-            //copy array not to mutate original state
-            newRooms = this.state.rooms.slice();
-            //check if room with the passed index is selected.
-            //if yes, 'selected' state of the rooms with less index than passed index (including passed index) 
-            //will be changed to false
-            //else, will be changed to true
-            if (newRooms[number].selected) {
+        //If a user unchecks a room,
+        // that room plus any room after that room should return to its unselected state (requirement 5)
+        if(newRooms[number].selected) {
+            for(let i=number; i<newRooms.length; i++) {
                 newRooms[i].selected = false
+                newRooms[i].adults = 1
+                newRooms[i].children = 0
             }
-            else {
+        }
+        else if(!newRooms[number].selected){
+            for(let i=1; i<=number; i++) {
                 newRooms[i].selected = true
             }
         }
@@ -84,6 +82,8 @@ class Parttwo extends Component {
                     checkBox={this.checkBox}
                     changeAdult={this.changeAdult}
                     changeChildren={this.changeChildren}
+                    adults = {this.state.adults}
+                    children = {this.state.children}
                 />)
         }
         return (
