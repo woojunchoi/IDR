@@ -77,9 +77,10 @@ class Parttwo extends Component {
         }
         return (
             <div className='room-container'>
-            <img src={pic} />
+            {/* <img src={pic} /> */}
                 <title>Hilton Dynamic Form</title>
                 {roomArr}
+                <button className='submit-button'>Submit</button>
             </div>
         );
     }

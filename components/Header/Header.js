@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Header.css';
 import logo from '../../test1_assets/hiltonLogo.png'
 import sample from'../../test1-mobile-page.png'

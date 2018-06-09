@@ -2,15 +2,16 @@
     display:inline-block;
     border:5px solid #e7e7e7;
     width:150px;
-    margin:15px;
+    margin-right:15px;
     box-sizing:border-box;
+    border-radius:15px;
 }
-
 .room-main {
     display:flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 15px;
+    padding-bottom:15px;
 }
 .room-checkbox {
     margin-right:5px;
@@ -27,6 +28,7 @@
 }
 .room-number.disabled {
     color:#8b8c90;
+    font-weight:400
 }
 .room-peoplenum-wrapper {
     display:flex;
