@@ -14,7 +14,7 @@ function Main() {
 
             <div className='img-container'>
                 {/* hotel image goes here */}
-                <img src={hotelImage} />
+                <img src={hotelImage} alt='hotelImage' />
                 <div className='hotel-info'>
                     {/* Used inline styling for easy color change */}
                     <h5 style={{ color: 'white' }}>Hilton Chicago</h5>

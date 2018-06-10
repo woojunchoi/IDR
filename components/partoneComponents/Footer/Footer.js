@@ -7,7 +7,7 @@ import logo from '../../../test1_assets/hiltonLogo.png'
 function Footer() {
   return (
     <footer className='footer-space'>
-        <img className='header_logoimg' src={logo} />
+        <img className='header_logoimg' src={logo} alt='headerImage' />
     </footer>
  );
 }
