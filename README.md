@@ -5,7 +5,7 @@
 #### Description
 
 - PART 1 - Create a static web page from scratch that matches the screenshot(only for mobile, media query is required for better ux for desktop users)
-- PART 2 - Using the screenshot test2-dynamic-form.png as a guide, create a web page that behaves in the following specified manner.
+- PART 2 - Using the screenshot test2-dynamic-form.png as a guide, created a web page
 
 ### Setup Instructions
 
