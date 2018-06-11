@@ -6,6 +6,7 @@ import styles from './Home.css';
 
 
 function Home() {
+    //main page
     return (
         <div className='home-container'>
             {/* Link to part 1 */}
