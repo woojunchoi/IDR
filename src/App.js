@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Partone from './Partone/Partone'
-import Parttwo from './Parttwo/Parttwo'
-import Home from './Home'
+import Partone from '../containers/Partone/Partone'
+import Parttwo from '../containers/Parttwo/Parttwo'
+import Home from '../containers/Home'
 
 
 function App(){
